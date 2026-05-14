@@ -1,0 +1,209 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-color: red; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* height: 100vh; */
+    overflow: hidden;
+}
+
+.navbar {
+    /* padding: 0px 30px; */
+    /* border: 1px solid black; */
+    background-color: rgb(249, 247, 245);
+    vertical-align: middle;
+    line-height: 5vh;
+}
+
+h2 {
+    display: inline-block;
+
+}
+
+.user {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(215, 246, 246);
+    color: rgb(56, 124, 251);
+    font-weight: normal;
+}
+
+nav {
+    display: inline-block;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+
+}
+
+nav li:hover {
+    color: rgb(0, 166, 255);
+    cursor: pointer;
+}
+
+h1,
+p,
+span {
+    display: block;
+}
+
+span {
+    color: rgb(0, 166, 255);
+}
+
+.Hero {
+    /* border: 1px solid black; */
+    padding: 5vh;
+}
+
+.first {
+    display: inline-block;
+    /* border: 1px solid black; */
+    width: 50vw;
+    margin-left: 15vw;
+
+}
+
+.second {
+    display: inline-block;
+    width: 30%;
+}
+
+img {
+    display: inline-block;
+    width: 90%;
+
+    /* height: 30%; */
+}
+
+button {
+    background-color: rgb(0, 166, 255);
+    color: white;
+    border-radius: 10px;
+    border: 0px;
+    cursor: pointer;
+    padding: 2%;
+    margin-top: 5vh;
+    transition: 0.7s;
+}
+
+/* This is transform property to perform action on button after hover it */
+button:hover{
+    transform: scale(1.2) rotate(-10deg);
+}
+
+/* Media Quaries for responsive page */
+
+
+/* In the Tablet mod this Media quary works and responsible for responsive webpage */
+
+@media(600px< width <1200px) {
+    .navbar {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    nav {
+        margin: 0px;
+        padding-top: 0px;
+
+    }
+
+    nav li {
+        margin: 0px 10px;
+    }
+
+    .Hero {
+        display: flex;
+        font-size: 2vw;
+        padding: 5vw;
+
+    }
+
+    .first {
+        justify-content: space-evenly;
+        margin: 0px;
+        width: 100%;
+
+    }
+
+    .second {
+        width: 100%;
+    }
+
+    button {
+        font-size: larger;
+        padding: 3vw;
+        width: 40vw;
+    }
+
+}
+
+
+/* When we use this webpage in mobile then this Media quary works */
+
+@media(width<=600px) {
+    body {
+        /* overflow-x: hidden; */
+        overflow: scroll;
+
+    }
+
+    nav {
+        display: none;
+
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .user {
+        justify-content: flex-end;
+        font-size: medium;
+    }
+
+    .Hero {
+        /* padding: 0px; */
+        /* border: 1px solid black; */
+        margin: 2vw;
+        display: flex;
+        flex-direction: column;
+        /* width: 100vw; */
+        padding: 0vw;
+        /* font-size: 6vw; */
+
+    }
+
+    .first {
+        width: 100%;
+        margin: 0vw;
+    }
+
+    h1,
+    p,
+    span {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .second {
+        width: 100%;
+    }
+
+    button {
+        /* display: flex; */
+        /* justify-content: center; */
+        height: 6vh;
+        width: 70vw;
+        align-self: center;
+        border-radius: 15px;
+    }
+}

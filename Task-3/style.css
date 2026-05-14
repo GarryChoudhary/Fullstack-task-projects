@@ -1,0 +1,38 @@
+*{
+    background-color: rgb(255, 136, 0);
+}
+
+.head{
+    color: rgb(50, 7, 143);
+}
+
+#bglime{
+    background-color: rgb(6, 228, 24);
+    color: red;
+}
+p{
+    color: white;
+}
+
+#para{
+    color: green;
+}
+
+span{
+    font-size: 30px;
+    color: black;
+}
+a{
+    background-color: yellow;
+}
+
+ul li:nth-child(2) a{
+    background-color: blue;
+}
+
+ul li:nth-child(4)  {
+    color: rgb(0, 0, 255);
+}
+ul li:nth-child(5)  {
+    color: rgb(255, 64, 0);
+}

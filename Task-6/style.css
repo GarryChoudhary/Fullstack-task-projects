@@ -1,0 +1,76 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+    margin: 0vh;
+    font-family: "Nunito", sans-serif;
+    
+}
+
+.container {
+    display: flex;
+}
+.right {
+    background-color: aliceblue;
+    justify-items: center;
+    width: 100vw;
+    align-content: center;
+}
+
+.form {
+    justify-items: center;
+    align-content: center;
+    width: 30vw;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 50vh;
+    padding-top: 10vh;
+    justify-content: center;
+}
+
+::placeholder {
+    padding-left: 1vw;
+}
+
+input {
+    height: 10vh;
+    border-radius: 1vh;
+    border: 0vh;
+}
+
+.forget {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+button {
+    margin-top: 5vh;
+    height: 10vh;
+    border: 0vh;
+    border-radius: 1vh;
+    background-color: rgb(0, 166, 255);
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(0, 153, 255);
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+
+}
+
+.Register {
+    color: rgb(0, 166, 255);
+}
+
+a {
+    text-decoration: none;
+}
