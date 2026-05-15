@@ -1,0 +1,58 @@
+.payment-main-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 60px;
+    padding: 20px;
+
+
+
+}
+
+.payment-container {
+    margin-left: 10vw;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.card-details {
+    border: 1px solid black;
+    height: 40vh;
+    width: 30vw;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 10px;
+    background-color: rgb(230, 230, 230);
+}
+
+.card-details input {
+    width: 10vw;
+    height: 20vh;
+    margin-top: 10px;
+    margin-left: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+
+}
+
+.card-details label {
+    font-weight: bold;
+
+}
+
+#Button {
+    margin-top: 8vh;
+    margin-left: 20vh;
+    height: 30px;
+    width: 20vh;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: #bd9090;
+}
+#Button:hover{
+    color: white;
+}

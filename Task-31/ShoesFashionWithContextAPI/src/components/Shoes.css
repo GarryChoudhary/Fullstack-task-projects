@@ -1,0 +1,35 @@
+.shoe-image{
+    height: 200px;
+    border-radius: 7%;
+    width: 100%;     
+    display: block;
+}
+.shoe-card{
+    border: 1px solid black;
+    width: 20rem;
+    height: 22rem;
+    border-radius: 5%;
+   
+}
+.shoesdesc{
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+.desc{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+.desc button{
+    height: 30px;
+    width: 100px;
+    /* background-color: red; */
+    cursor: pointer;
+    border-radius: 50px;
+    border: 1px solid black;
+}

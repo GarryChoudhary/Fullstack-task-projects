@@ -1,0 +1,15 @@
+
+.main-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  overflow: scroll;
+  margin-top: 60px;
+  padding: 20px;
+
+}
+
+.items {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}

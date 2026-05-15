@@ -1,0 +1,47 @@
+
+ .cart {
+  border: 1px solid black;
+  padding: 2rem;
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+
+}
+
+.cartitems {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cartcards {
+  display: flex;
+  gap: 2rem;
+}
+
+#QytIncrease {
+  background-color: rgb(117, 116, 116);
+  height: 1.5rem;
+  width: 2rem;
+  text-align: center;
+  margin-left: 5px;
+  cursor: pointer;
+  color: white;
+
+}
+
+#QytDecrease {
+  background-color: rgb(117, 116, 116);
+  height: 1.5rem;
+  width: 2rem;
+  text-align: center;
+  margin-right: 5px;
+  cursor: pointer;
+  color: white;
+
+}
+
+#total {
+  text-align: center;
+  margin-top: 4rem;
+} 
