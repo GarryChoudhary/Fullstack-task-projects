@@ -1,34 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 import Card from './components/Card'
+import cardDetails from './index'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-   <>
-   <h1>All the cards are here!</h1>
-   <div className="container">
-   
-   <Card/>
-   <Card/>
-   <Card/>
-   <Card/>
-   <Card/>
-   <Card/>
-   <Card/>
-   <Card/>
-   <Card/>
+    <>
+      <h1>All the cards are here!</h1>
+      <div className="container">
 
-   </div>
-
-   
-
-   </>
-
+        {cardDetails.map((item, index) => {
+          return(
+          <Card
+            key={index}
+            image={item.image}
+            card={item.card}
+            title={item.title}
+          />)
+        })}
+      </div>
+    </>
   )
 }
 

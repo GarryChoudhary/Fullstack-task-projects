@@ -186,7 +186,8 @@
 
 .container{
   display: flex;
-  gap: 3rem;
+  gap: 5rem;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  padding: 0 10rem;
 }

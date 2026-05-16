@@ -1,24 +1,54 @@
-body{
+body {
     text-align: center;
-    
+    background-color: black;
+
 }
 
-.card{
-    border: 1px solid black;
+.card {
+     /* border: 2px solid transparent; */
     width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     color: white;
-    border-color: rgb(255, 60, 0);
-    background-color: black;
-    
-    
+    background: black;
+    padding: 15px;
+
+
+
 }
-.card img{
+.border{
+    padding: 3px;
+    border-radius: 5px;
+    background: linear-gradient( 270deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000);
+     background-size: 300% 300%;
+
+    animation: borderRun 8s linear infinite;
+}
+
+.card img {
     height: 200px;
     width: 200px;
     margin-top: 2rem;
+}
+
+@keyframes borderRun {
+    0%{
+        background-position: 0% 50%;
+    }
+
+    100%{
+        background-position: 300% 50%;
+    }
 }
