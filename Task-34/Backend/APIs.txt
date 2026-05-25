@@ -1,0 +1,147 @@
+-->Routes-->
+
+Method(GET)->
+
+/todos---> for getting all tasks
+/todos/:id---> getting all tasks by their id
+
+
+Method(POST)->(for create a new task)
+
+/todos---> creat a new task and add it into the original task array
+
+
+Method(PUT)-> (for update the task)
+
+/todos/:id---> update a task with theri id
+
+Method(DELETE)-> (for delete the task with the id)
+
+/todos/:id---> delete the task with the id
+
+
+Proper Status Codes
+201 -> created
+404 -> not found
+200 -> success
+
+
+1.ADD TASK
+
+   1.API endpoint-->  POST /todos
+   2.app.post('/todos', (req, res) => {
+
+    const { title, description, status } = req.body;
+
+    const newTodo = {
+        id: String(Date.now()),
+        title,
+        description,
+        status
+    };
+
+    Todos.push(newTodo);
+
+    res.status(201).json({
+        success: true,
+        message: 'Todo created successfully',
+        data: newTodo
+    });
+
+});
+
+   3.For adding a new task
+
+
+2.GET A SINGLE TASK BY ID
+
+    1.API endpoint-> GET /todos/:id
+    2.app.get('/todos/:id', (req, res) => {
+
+    const todoId = req.params.id;
+
+    const todo = Todos.find((each) => each.id === todoId);
+
+    if (!todo) {
+        return res.status(404).json({
+            success: false,
+            message: 'Todo not found'
+        });
+    }
+
+    res.status(200).json({
+        success: true,
+        data: todo
+    });
+
+});
+
+    3.For getting a single task by id
+
+
+3.UPDATE A TASK WITH ID
+
+    1.API endpoint -->PUT /todos/:id
+    2.app.put('/todos/:id', (req, res) => {
+
+    const todoId = req.params.id;
+
+    const todoIndex = Todos.findIndex(
+        (each) => each.id === todoId
+    );
+
+    if (todoIndex === -1) {
+        return res.status(404).json({
+            success: false,
+            message: 'Todo not found'
+        });
+    }
+
+    Todos[todoIndex] = {
+        ...Todos[todoIndex],
+        ...req.body
+    };
+
+    res.status(200).json({
+        success: true,
+        message: 'Todo updated successfully',
+        data: Todos[todoIndex]
+    });
+
+});
+
+    3.For update a task with their id
+
+
+4.DELETE A TASK WITH ID
+
+    1.API endpoint->  DELETE /todos/:id
+    2.app.delete('/todos/:id', (req, res) => {
+
+    const todoId = req.params.id;
+
+    const todo = Todos.find(
+        (each) => each.id === todoId
+    );
+
+    if (!todo) {
+        return res.status(404).json({
+            success: false,
+            message: 'Todo not found'
+        });
+    }
+
+    Todos = Todos.filter(
+        (each) => each.id !== todoId
+    );
+
+    res.status(200).json({
+        success: true,
+        message: 'Todo deleted successfully',
+        data: Todos
+    });
+
+});
+
+
+    3.Deleting a task with theri id
